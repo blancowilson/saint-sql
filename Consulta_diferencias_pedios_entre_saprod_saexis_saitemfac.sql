@@ -23,7 +23,7 @@ group by coditem, codubic
 update e
 set e.cantcom = p.cantcom_ped
 from pedidos p inner join SAEXIS E on p.coditem = e.CodProd
-where p.cantcom_ped <> e.CantCom and e.CodUbic='001'
+where p.cantcom_ped <> e.CantCom and e.CodUbic='001'--se debe mejorar en 
 
 
 update SAEXIS
