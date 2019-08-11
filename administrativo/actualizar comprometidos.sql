@@ -1,3 +1,10 @@
+/* Elaborado por Wilson blanco
+https://twitter.com/blancowilson
+de la empresa saif integral systems, C.A.
+www.sainsyca.com.ve
+*/
+
+
 UPDATE SAEXIS
 SET CantCom =0
 where CodProd not in (select coditem 
@@ -42,9 +49,6 @@ select pr.CodProd,pr.Existen,pr.Compro,exis.Pedidos
    FROM SAPROD pr
       INNER JOIN Exis ON Exis.Codprod = Pr.CodProd 
 where Exis.Pedidos<>Pr.Compro
-
-
-
 
 
 
