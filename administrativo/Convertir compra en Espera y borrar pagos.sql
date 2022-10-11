@@ -19,9 +19,10 @@ set @nrolote='00001'
 --select * from SAITEMCOM where NumeroD=@numeroErrado and TipoCom=@Tipocom and CodProv=@codprov
 
 --
-update SAEXIS
-set Existen=existen-(select a.cantidad from SAITEMCOM a where a.NumeroD=@numeroErrado and TipoCom=@Tipocom  and a.CodItem=SAEXIS.CodProd)
-where CodProd in (select Coditem from SAITEMCOM where NumeroD=@numeroErrado and TipoCom=@Tipocom)
+Update Exis
+set Exis.Existen= Exis.Existen - ITEM.Cantidad
+from SAEXIS Exis inner join SAITEMCOM ITEM on  ITEM.CodItem = Exis.CodProd and ITEM.CodUbic = Exis.CodUbic
+where item.NumeroD=@numeroErrado and item.TipoCom=@Tipocom and item.CodProv=@codprov and item.EsServ =0
 
 ---si maneja lote se ejecuta este habilite este query
 /*
