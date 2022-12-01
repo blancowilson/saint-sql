@@ -1,3 +1,4 @@
+-- Un error que debe corregirse en el program no ejecutar sin un analisis previo
 update SACOMP
 set TExento= 0, TGravable= TGravable+TExento
 from sacomp
