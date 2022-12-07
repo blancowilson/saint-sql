@@ -8,8 +8,8 @@ declare @numeroAnterior varchar(15),
 		@tipopago varchar(2),
 		@nrolote varchar (15)
 
-set @numeroAnterior='101940'
-set @codprov='J002137789'
+set @numeroAnterior='22-18721'
+set @codprov='J300180174'
 set @Tipocom='H'
 set @TIPOCXP='10'
 set @tipopago = '41'
@@ -17,23 +17,28 @@ set @tipoRetencion='81'
 set @nrolote='00001'
 set @tipocompracxp='10'
 
---cambiar compra a documentos en espera
+
+select 0 sacomp,	*   From    SACOMP		where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+select 0 sacomp,	*   From    SACOMP		where NumeroN=@numeroAnterior and CodProv=@codprov
+select 0 saitemcom, *   From   SAITEMCOM	where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+select				*	From   SASEPRCOM	 where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+select				*	From   SATAXITC		where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+select				*	From   SATAXCOM		where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+select				*	From   SAPAGCXP		where NroRegi=(select NroUnico from SAACXP where NumeroD=@numeroAnterior  and CodProv=@codprov) and NumeroD=@numeroAnterior
+--select  *			   From    SAPAGCXP		where NroPpal=(select NroUnico from SAACXP where NumeroN=@numeroAnterior  and CodProv=@codprov) and NumeroD=@numeroAnterior
+select				*	From   SAACXP		where NumeroD=@numeroAnterior and CodProv=@codprov
+select				*	From   SAACXP		 where NumeroN=@numeroAnterior and CodProv=@codprov
+
+--compra
 update SACOMP set Numerod = @NumeroCorrecto where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
 -- items de compra
-update SAITEMCOM set Numerod = @NumeroCorrecto where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
-
-Update SASEPRCOM set Numerod = @NumeroCorrecto where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
-
-update SATAXITC set Numerod = @NumeroCorrecto where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
-
-update SATAXCOM set Numerod = @NumeroCorrecto where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
-
-delete SAPAGCXP where NroPpal=(select NroUnico from SAACXP where NumeroN=@numeroAnterior and TipoCxP=@tipoRetencion and CodProv=@codprov) and NumeroD=@numeroAnterior
-
-delete from SAPAGCXP where NroPpal=(select NroUnico from SAACXP where NumeroN=@numeroAnterior  and CodProv=@codprov and TipoCxP=@tipocompracxp) and NumeroD=@numeroAnterior
-
-delete SAACXP where NumeroD=@numeroAnterior and CodProv=@codprov and TipoCxP=@tipocompracxp
-
-delete SAACXP where NumeroN=@numeroAnterior and TipoCxP=@tipoRetencion and CodProv=@codprov
-
-
+update     SACOMP		set numerod=@NumeroCorrecto	where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+Update     SACOMP		set numeroN=@NumeroCorrecto	where NumeroN=@numeroAnterior and CodProv=@codprov
+update    SAITEMCOM		set numerod=@NumeroCorrecto	where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+update	  SASEPRCOM		set numerod=@NumeroCorrecto	where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+update	  SATAXITC		set numerod=@NumeroCorrecto	where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+update	  SATAXCOM		set numerod=@NumeroCorrecto	where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+update	  SAPAGCXP		set numerod=@NumeroCorrecto	where NroRegi=(select NroUnico from SAACXP where NumeroD=@numeroAnterior  and CodProv=@codprov) and NumeroD=@numeroAnterior
+--update	   SAPAGCXP		set numerod=@NumeroCorrecto	where NroPpal=(select NroUnico from SAACXP where NumeroN=@numeroAnterior  and CodProv=@codprov) and NumeroD=@numeroAnterior
+update	  SAACXP		set numerod=@NumeroCorrecto	where NumeroD=@numeroAnterior and CodProv=@codprov
+update 	  SAACXP		set numeroN=@NumeroCorrecto	where NumeroN=@numeroAnterior and CodProv=@codprov
