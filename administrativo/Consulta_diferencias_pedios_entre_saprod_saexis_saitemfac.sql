@@ -1,36 +1,53 @@
 
 --consultar diferencias
-with pedidos (coditem,codubic,cantcom_ped) as
--- Define La Transaccion tempora y la lista de columnas
-(
-select coditem,codubic, sum(cantidad) as cantcom
- from saitemfac
-where tipofac = 'E'
-group by coditem, codubic
-) select coditem, p.cantcom_ped, e.CantCom
-from pedidos p inner join SAEXIS E on p.coditem = e.CodProd
-where p.cantcom_ped <> e.CantCom and e.CodUbic='001'
+		WITH It (Codprod,CodUbic, Pedidos) AS
+		(
+		   SELECT It.CodItem,It.CodUbic, SUM(It.cantidad) as Pedidos
+			 -- FROM SAEXIS Ex
+			   --  JOIN SAITEMFAC It ON Ex.CodProd = It.CodItem and Ex.CodUbic = It.CodUbic
+			from SAITEMFAC IT 	
+				where It.TipoFac ='E'
+			  GROUP BY It.CodItem,It.CodUbic
+		)
+		select ex.cantcom, it.Pedidos
+		   FROM SAEXIS Ex
+			  INNER JOIN It ON It.Codprod = Ex.CodProd and Ex.CodUbic=It.CodUbic
+		where It.Pedidos<>ex.CantCom;
 
 
-with pedidos (coditem,codubic,cantcom_ped) as
--- Define La Transaccion tempora y la lista de columnas
-(
-select coditem,codubic, sum(cantidad) as cantcom
- from saitemfac
-where tipofac = 'E'
-group by coditem, codubic
-) 
-update e
-set e.cantcom = p.cantcom_ped
-from pedidos p inner join SAEXIS E on p.coditem = e.CodProd
-where p.cantcom_ped <> e.CantCom and e.CodUbic='001'--se debe mejorar en 
+		UPDATE SAEXIS
+		SET CantCom =0
+		where CodProd not in (select coditem 
+								from SAITEMFAC
+								where TipoFac ='E' and Cantidad>0
+								group by CodItem) and CantCom<>0;
+
+		WITH It (Codprod,CodUbic, Pedidos) AS
+		(
+		   SELECT It.CodItem,It.CodUbic, SUM(It.cantidad) as Pedidos
+			 -- FROM SAEXIS Ex
+			   --  JOIN SAITEMFAC It ON Ex.CodProd = It.CodItem and Ex.CodUbic = It.CodUbic
+			from SAITEMFAC IT 	
+				where It.TipoFac ='E'
+			  GROUP BY It.CodItem,It.CodUbic
+		)
+		UPDATE Ex SET Ex.CantCom = It.Pedidos
+		   FROM SAEXIS Ex
+			  INNER JOIN It ON It.Codprod = Ex.CodProd and Ex.CodUbic=It.CodUbic
+		where It.Pedidos<>ex.CantCom;
+
+		WITH Exis (Codprod, Pedidos) AS
+		(
+		   SELECT Ex.CodProd, SUM(Ex.cantcom) as Pedidos
+			  FROM SAEXIS Ex
+			  GROUP BY Ex.CodProd
+		)
+		UPDATE Pr SET Pr.Compro = Exis.Pedidos
+		   FROM SAPROD pr
+			  INNER JOIN Exis ON Exis.Codprod = Pr.CodProd 
+		where Exis.Pedidos<>Pr.Compro;
 
 
-update SAEXIS
-set CantCom =0
-where CodProd not in (select coditem from SAITEMFAC where TipoFac ='E' and Cantidad >0) and CodUbic ='001' and CantCom >0
 
-update P 
-set p.compro = e.cantcom
-from SAPROD p inner join SAEXIS E on p.CodProd = e.CodProd
-where e.CodUbic ='001' and p.Compro <>e.CantCom
+
+

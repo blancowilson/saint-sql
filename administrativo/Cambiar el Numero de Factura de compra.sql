@@ -18,16 +18,16 @@ set @nrolote='00001'
 set @tipocompracxp='10'
 
 
-select 0 sacomp,	*   From    SACOMP		where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
-select 0 sacomp,	*   From    SACOMP		where NumeroN=@numeroAnterior and CodProv=@codprov
-select 0 saitemcom, *   From   SAITEMCOM	where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
-select				*	From   SASEPRCOM	 where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
-select				*	From   SATAXITC		where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
-select				*	From   SATAXCOM		where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
-select				*	From   SAPAGCXP		where NroRegi=(select NroUnico from SAACXP where NumeroD=@numeroAnterior  and CodProv=@codprov) and NumeroD=@numeroAnterior
---select  *			   From    SAPAGCXP		where NroPpal=(select NroUnico from SAACXP where NumeroN=@numeroAnterior  and CodProv=@codprov) and NumeroD=@numeroAnterior
-select				*	From   SAACXP		where NumeroD=@numeroAnterior and CodProv=@codprov
-select				*	From   SAACXP		 where NumeroN=@numeroAnterior and CodProv=@codprov
+select *	From	SACOMP		where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+select *	From    SACOMP		where NumeroN=@numeroAnterior and CodProv=@codprov
+select *	From	SAITEMCOM	where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+select *	From	SASEPRCOM	where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+select *	From	SATAXITC	where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+select *	From	SATAXCOM	where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
+select *	From	SAPAGCXP	where NroRegi=(select NroUnico from SAACXP where NumeroD=@numeroAnterior  and CodProv=@codprov) and NumeroD=@numeroAnterior
+--select *	From    SAPAGCXP	where NroPpal=(select NroUnico from SAACXP where NumeroN=@numeroAnterior  and CodProv=@codprov) and NumeroD=@numeroAnterior
+select *	From	SAACXP		where NumeroD=@numeroAnterior and CodProv=@codprov
+select *	From	SAACXP		where NumeroN=@numeroAnterior and CodProv=@codprov
 
 --compra
 update SACOMP set Numerod = @NumeroCorrecto where NumeroD=@numeroAnterior and TipoCom=@Tipocom and CodProv=@codprov
