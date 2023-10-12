@@ -1,4 +1,4 @@
-USE EASainsycaDb
+USE AbrahamcolorAdminDB
 GO
 
 /****** Object:  Table [dbo].[Adcc_Variacion]    Script Date: 04-09-2019 08:32:41 a.m. ******/
@@ -28,9 +28,11 @@ IF NOT EXISTS(select so.name from sysobjects so, syscolumns si where si.name = '
 ALTER TABLE [dbo].saitemfac WITH NOCHECK ADD TotalMoneda	decimal(28,4)	NULL;
 IF NOT EXISTS(select so.name from sysobjects so, syscolumns si where si.name = 'PrecioMoneda' And so.id = si.id And so.name = 'saitemfac') 
 ALTER TABLE [dbo].saitemfac WITH NOCHECK ADD PrecioMoneda	decimal(28,4)	NULL;
+IF NOT EXISTS(select so.name from sysobjects so, syscolumns si where si.name = 'CostoMoneda' And so.id = si.id And so.name = 'saitemfac') 
+ALTER TABLE [dbo].saitemfac WITH NOCHECK ADD CostoMoneda	decimal(28,4)	NULL;
 
 
-USE EASainsycaDb
+USE AbrahamcolorAdminDB
 GO
 /****** Object:  Trigger [dbo].[TR_TotalBs]    Script Date: 04-09-2019 08:06:58 a.m. ******/
 SET ANSI_NULLS ON
@@ -42,7 +44,7 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-Create TRIGGER [dbo].[TR_FactorItem]
+Alter TRIGGER [dbo].[TR_FactorItem]
    ON  [dbo].[SAITEMFAC] 
    AFTER  INSERT
 AS 
@@ -61,7 +63,8 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-	UPDATE SAITEMFAC SET PrecioMoneda=PRECIO/@FACTOR,TotalMoneda=(PRECIO/@FACTOR)*Cantidad,Tasa=@FACTOR 
+	UPDATE SAITEMFAC SET PrecioMoneda=PRECIO/@FACTOR,  CostoMoneda=Costo/@FACTOR,
+		TotalMoneda=(PRECIO/@FACTOR)*Cantidad,Tasa=@FACTOR 
 	FROM SAITEMFAC 
 	WHERE NumeroD=@NUMEROD AND TipoFac=@TIPOFACT AND CodItem=@CODPROD
     -- Insert statements for trigger here
