@@ -8,7 +8,7 @@ SELECT coditem,codubic, sum(cantidad) as cantcom
 WHERE tipofac = 'E'
 group by coditem, codubic
 ) select coditem, Ped.codubic, ISNULL(Ped.cantcom_ped,0), e.CantCom
-from Pedidos Ped RIGHT join SAEXIS E on Ped.coditem = e.CodProd
+from Pedidos Ped RIGHT join SAEXIS E on Ped.coditem = e.CodProd and Ped.codubic = e.codubic
 where ISNULL(Ped.cantcom_ped,0) <> e.CantCom and (e.CodUbic=Ped.codubic OR Ped.codubic IS NULL)
 
 
