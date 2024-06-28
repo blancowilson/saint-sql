@@ -6,7 +6,7 @@ declare @numerod varchar (10),
 		@NroRegi varchar (10),
 		@ClienteAnulado Varchar (10),
 		@MostarT Smallint
-set @numerod='029911' 
+set @numerod='029911'   -- Numero del pago
 set @codclie='J000025479'
 set @tiponc ='B'
 set @tipocxc = '41'
