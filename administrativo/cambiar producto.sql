@@ -1,32 +1,91 @@
-select * from SAPROD
-where CodProd like '%BP4k%'
+--1
+UPDATE PA
+SET PA.CodProd = NC.[CODIGO NUEVO]
+	from SACODBAR PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodProd = NC.[CODIGO ACTUAL] 
+--2
+UPDATE PA
+SET PA.CodAlte = NC.[CODIGO NUEVO]
+	from SACODBAR PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodAlte = NC.[CODIGO ACTUAL] 
+--3
+UPDATE PA
+SET PA.CodProd = NC.[CODIGO NUEVO]
+	from SAEXIS PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodProd = NC.[CODIGO ACTUAL]
+--4
+UPDATE PA
+SET PA.CodProd = NC.[CODIGO NUEVO]
+	from SAEPRD PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodProd = NC.[CODIGO ACTUAL]
+
+--5 update SAINITI
+UPDATE PA
+SET PA.CodProd = NC.[CODIGO NUEVO]
+from SAINITI PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodProd = NC.[CODIGO ACTUAL]
 
 
-select CodProd from SAPROD
-where CodProd = 'BP4K-341-70CMTR'
+--6
+UPDATE PA
+SET PA.CodItem = NC.[CODIGO NUEVO], REFERE= RTRIM(LTRIM([CODIGO ACTUAL]))
+	from SAITEMOPI PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodItem = NC.[CODIGO ACTUAL]	
 
-select * from SAEXIS
-where CodProd = 'BP4K-341-70CMTR'
+--7
+UPDATE PA
+SET PA.CodItem = NC.[CODIGO NUEVO], REFERE= RTRIM(LTRIM([CODIGO ACTUAL]))
+	from SAITEMCOM PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodItem = NC.[CODIGO ACTUAL]
 
-select * from SACODBAR 
-where CodProd ='BP4K-341-70CMTR'
+--8
+UPDATE PA
+SET PA.CodItem = NC.[CODIGO NUEVO], REFERE= RTRIM(LTRIM([CODIGO ACTUAL]))
+	from SAITEMFAC PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodItem = NC.[CODIGO ACTUAL]
 
-select * from SAITEMOPI
-where CodItem ='BP4K-341-70CMTR'
+--9
+UPDATE PA
+SET PA.CodItem = NC.[CODIGO NUEVO]
+	from SAITEO PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodItem = NC.[CODIGO ACTUAL]
 
-select * from SAEPRD
-where CodProd ='BP4K-341-70CMTR'
+--10
+UPDATE PA
+SET PA.CodItem = NC.[CODIGO NUEVO]
+	from SAITCV  PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodItem = NC.[CODIGO ACTUAL]
 
+--11
+UPDATE PA
+SET PA.CODPROD = NC.[CODIGO NUEVO], REFERE= RTRIM(LTRIM([CODIGO ACTUAL]))
+	from SAPROD PA Inner join NuevosCodigosProd NC ON
+		PA.CodProd = NC.[CODIGO ACTUAL]
 
-select * from SATAXPRD
-where CodProd ='BP4K-341-70CMTR'
+--12
+UPDATE PA
+SET PA.CodItem = NC.[CODIGO NUEVO]
+	from SAITFL  PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodItem = NC.[CODIGO ACTUAL]
 
-select * from SATAXITC
-where CodItem ='BP4K-341-70CMTR'
+--13
+UPDATE PA
+SET PA.CODPROD = NC.[CODIGO NUEVO]
+	from SASERI  PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodProd = NC.[CODIGO ACTUAL]
 
-select * from SAITEMFAC
-where CodItem ='BP4K-341-70CMTR'
+UPDATE PA
+SET PA.CodItem = NC.[CODIGO NUEVO]
+	from SATAXITF PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodItem = NC.[CODIGO ACTUAL]
 
-select * from SAITEMCOM
-where CodItem ='BP4K-341-70CMTR'
+UPDATE PA
+SET PA.CODPROD = NC.[CODIGO NUEVO]
+	from SATAXPRD PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodProd = NC.[CODIGO ACTUAL]
+
+UPDATE PA
+SET PA.CodItem = NC.[CODIGO NUEVO]
+	from SATAXITC PA INNER JOIN NuevosCodigosProd NC ON
+		PA.CodItem = NC.[CODIGO ACTUAL]
 
