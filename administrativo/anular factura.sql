@@ -18,8 +18,8 @@ DECLARE @FechaT   datetime
 declare @CantDoc int
 SET DATEFORMAT YMD
 set @TipoFac = 'A'
-set  @NumeroD = '00002664'
-set  @CodClie = 'J405867930'
+set  @NumeroD = '*000448'
+set  @CodClie = 'J312657219'
 set  @FechaE = getdate()
 set  @FechaT = Getdate() 
 

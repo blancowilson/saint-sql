@@ -1,0 +1,3149 @@
+object ppReport1: TppReport
+  AutoStop = False
+  DataPipeline = daFireDACQueryDataView2.Vendedores
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Duplex = dpNone
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 297000
+  PrinterSetup.mmPaperWidth = 210000
+  PrinterSetup.PaperSize = 9
+  SaveAsTemplate = True
+  Template.DatabaseSettings.DataPipeline = plItemUpdate
+  Template.DatabaseSettings.Name = 'Comisiones Vendedores'
+  Template.DatabaseSettings.NameField = 'Itemname'
+  Template.DatabaseSettings.TemplateField = 'Template'
+  Template.FileName = 
+    'C:\Saint Enterprise\Administrativo\Reportes\comisiones vendedore' +
+    's.rtm'
+  Template.Format = ftASCII
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  EmailSettings.ConnectionSettings.MailService = 'SMTP'
+  EmailSettings.ConnectionSettings.WebMail.GmailSettings.OAuth2.RedirectPort = 0
+  EmailSettings.ConnectionSettings.WebMail.Outlook365Settings.OAuth2.RedirectPort = 0
+  EmailSettings.ConnectionSettings.EnableMultiPlugin = False
+  LanguageID = 'Default'
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = True
+  OutlineSettings.Visible = True
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  ThumbnailSettings.PageHighlight.Width = 3
+  ThumbnailSettings.ThumbnailSize = tsSmall
+  PDFSettings.EmbedFontOptions = []
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.AllowExtract = True
+  PDFSettings.EncryptSettings.AllowAssemble = True
+  PDFSettings.EncryptSettings.AllowQualityPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.EncryptSettings.EncryptionType = etRC4
+  PDFSettings.DigitalSignatureSettings.SignPDF = False
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PDFSettings.PDFAFormat = pafNone
+  PreviewFormSettings.PageBorder.mmPadding = 0
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = True
+  TextSearchSettings.Visible = True
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  XLSSettings.WorksheetName = 'Report'
+  CloudDriveSettings.DropBoxSettings.OAuth2.RedirectPort = 0
+  CloudDriveSettings.DropBoxSettings.DirectorySupport = True
+  CloudDriveSettings.GoogleDriveSettings.OAuth2.RedirectPort = 0
+  CloudDriveSettings.GoogleDriveSettings.DirectorySupport = False
+  CloudDriveSettings.OneDriveSettings.OAuth2.RedirectPort = 0
+  CloudDriveSettings.OneDriveSettings.DirectorySupport = True
+  Left = 323
+  Top = 170
+  Version = '21.03'
+  mmColumnWidth = 0
+  DataPipelineName = 'Vendedores'
+  object ppHeaderBand1: TppHeaderBand
+    Background.Brush.Style = bsClear
+    Border.mmPadding = 0
+    mmBottomOffset = 0
+    mmHeight = 32015
+    mmPrintPosition = 0
+    object ppLabel16: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label16'
+      AutoSize = False
+      Border.mmPadding = 0
+      Caption = 'Codigo'
+      Color = clSilver
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 10
+      Font.Style = []
+      FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+      FormFieldSettings.FormFieldType = fftNone
+      TextAlignment = taCentered
+      mmHeight = 4233
+      mmLeft = 265
+      mmTop = 27798
+      mmWidth = 25665
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel17: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label17'
+      AutoSize = False
+      Border.mmPadding = 0
+      Caption = 'Vendedor'
+      Color = clSilver
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 10
+      Font.Style = []
+      FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+      FormFieldSettings.FormFieldType = fftNone
+      TextAlignment = taCentered
+      mmHeight = 4233
+      mmLeft = 26723
+      mmTop = 27798
+      mmWidth = 77523
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel18: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label18'
+      AutoSize = False
+      Border.mmPadding = 0
+      Caption = 'Clase'
+      Color = clSilver
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 10
+      Font.Style = []
+      FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+      FormFieldSettings.FormFieldType = fftNone
+      TextAlignment = taCentered
+      mmHeight = 4233
+      mmLeft = 105040
+      mmTop = 27798
+      mmWidth = 27781
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel19: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label19'
+      AutoSize = False
+      Border.mmPadding = 0
+      Caption = 'Telefonos'
+      Color = clSilver
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 10
+      Font.Style = []
+      FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+      FormFieldSettings.FormFieldType = fftNone
+      TextAlignment = taCentered
+      mmHeight = 4233
+      mmLeft = 133615
+      mmTop = 27798
+      mmWidth = 53975
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel15: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label15'
+      Border.mmPadding = 0
+      Caption = 'Comisiones de vendedores'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+      FormFieldSettings.FormFieldType = fftNone
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 5027
+      mmLeft = 70115
+      mmTop = 10864
+      mmWidth = 57150
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel27: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label27'
+      Border.mmPadding = 0
+      Caption = 'Per'#237'odo del:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+      FormFieldSettings.FormFieldType = fftNone
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3439
+      mmLeft = 60589
+      mmTop = 19844
+      mmWidth = 15082
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel28: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label28'
+      Border.mmPadding = 0
+      Caption = 'hasta el:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+      FormFieldSettings.FormFieldType = fftNone
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3439
+      mmLeft = 106627
+      mmTop = 19844
+      mmWidth = 11112
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppVariable2: TppVariable
+      DesignLayer = ppDesignLayer1
+      UserName = 'vaFechaI'
+      Border.mmPadding = 0
+      BlankWhenZero = False
+      CalcOrder = 0
+      DataType = dtDate
+      DisplayFormat = 'dd/mm/yyyy'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3439
+      mmLeft = 80698
+      mmTop = 19844
+      mmWidth = 13758
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppVariable3: TppVariable
+      DesignLayer = ppDesignLayer1
+      UserName = 'vaFechaF'
+      Border.mmPadding = 0
+      BlankWhenZero = False
+      CalcOrder = 1
+      DataType = dtDate
+      DisplayFormat = 'dd/mm/yyyy'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3439
+      mmLeft = 123031
+      mmTop = 19844
+      mmWidth = 14023
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable1: TppSystemVariable
+      DesignLayer = ppDesignLayer1
+      UserName = 'SystemVariable1'
+      Border.mmPadding = 0
+      VarType = vtPrintDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2911
+      mmLeft = 170657
+      mmTop = 529
+      mmWidth = 24341
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable2: TppSystemVariable
+      DesignLayer = ppDesignLayer1
+      UserName = 'SystemVariable2'
+      Border.mmPadding = 0
+      VarType = vtPageSetDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2910
+      mmLeft = 179917
+      mmTop = 3440
+      mmWidth = 15081
+      BandType = 0
+      LayerName = Foreground
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    Border.mmPadding = 0
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 15081
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      DesignLayer = ppDesignLayer1
+      UserName = 'SubReport1'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      DataPipelineName = 'COMIVTA'
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 197300
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        AutoStop = False
+        DataPipeline = daFireDACQueryDataView1.COMIVTA
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.Duplex = dpNone
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 6350
+        PrinterSetup.mmMarginLeft = 6350
+        PrinterSetup.mmMarginRight = 6350
+        PrinterSetup.mmMarginTop = 6350
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Template.DatabaseSettings.NameField = 'ItemName'
+        Template.DatabaseSettings.TemplateField = 'Template'
+        Template.SaveTo = stDatabase
+        Version = '21.03'
+        mmColumnWidth = 0
+        DataPipelineName = 'COMIVTA'
+        object ppTitleBand1: TppTitleBand
+          Background.Brush.Style = bsClear
+          Border.mmPadding = 0
+          mmBottomOffset = 0
+          mmHeight = 10848
+          mmPrintPosition = 0
+          object ppLabel1: TppLabel
+            DesignLayer = ppDesignLayer2
+            UserName = 'Label1'
+            AutoSize = False
+            Border.mmPadding = 0
+            Caption = 'Fecha'
+            Color = 13209
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            mmHeight = 3969
+            mmLeft = 8721
+            mmTop = 6876
+            mmWidth = 17198
+            BandType = 1
+            LayerName = Foreground1
+          end
+          object ppLabel2: TppLabel
+            DesignLayer = ppDesignLayer2
+            UserName = 'Label2'
+            AutoSize = False
+            Border.mmPadding = 0
+            Caption = 'Numero'
+            Color = 13209
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            mmHeight = 3969
+            mmLeft = 26183
+            mmTop = 6876
+            mmWidth = 30977
+            BandType = 1
+            LayerName = Foreground1
+          end
+          object ppLabel3: TppLabel
+            DesignLayer = ppDesignLayer2
+            UserName = 'Label3'
+            AutoSize = False
+            Border.mmPadding = 0
+            Caption = 'Descripci'#243'n'
+            Color = 13209
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            mmHeight = 3969
+            mmLeft = 57689
+            mmTop = 6876
+            mmWidth = 76511
+            BandType = 1
+            LayerName = Foreground1
+          end
+          object ppLabel4: TppLabel
+            DesignLayer = ppDesignLayer2
+            UserName = 'Label4'
+            AutoSize = False
+            Border.mmPadding = 0
+            Caption = 'Monto'
+            Color = 13209
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            mmHeight = 3969
+            mmLeft = 134730
+            mmTop = 6876
+            mmWidth = 25135
+            BandType = 1
+            LayerName = Foreground1
+          end
+          object ppLabel5: TppLabel
+            DesignLayer = ppDesignLayer2
+            UserName = 'Label5'
+            AutoSize = False
+            Border.mmPadding = 0
+            Caption = '% comis'
+            Color = 13209
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            mmHeight = 3969
+            mmLeft = 160394
+            mmTop = 6876
+            mmWidth = 12965
+            BandType = 1
+            LayerName = Foreground1
+          end
+          object ppLabel6: TppLabel
+            DesignLayer = ppDesignLayer2
+            UserName = 'Label6'
+            AutoSize = False
+            Border.mmPadding = 0
+            Caption = 'Monto comision'
+            Color = 13209
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            mmHeight = 3969
+            mmLeft = 173888
+            mmTop = 6876
+            mmWidth = 21167
+            BandType = 1
+            LayerName = Foreground1
+          end
+          object ppLabel13: TppLabel
+            DesignLayer = ppDesignLayer2
+            UserName = 'Label13'
+            Border.mmPadding = 0
+            Caption = 'Comisiones por ventas'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 79375
+            mmTop = 265
+            mmWidth = 38629
+            BandType = 1
+            LayerName = Foreground1
+          end
+        end
+        object ppDetailBand2: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          Border.mmPadding = 0
+          mmBottomOffset = 0
+          mmHeight = 4763
+          mmPrintPosition = 0
+          object ppDBText1: TppDBText
+            DesignLayer = ppDesignLayer2
+            UserName = 'DBText1'
+            Border.mmPadding = 0
+            DataField = 'fechae'
+            DataPipeline = daFireDACQueryDataView1.COMIVTA
+            DisplayFormat = 'dd/mm/yyyy'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'COMIVTA'
+            mmHeight = 4498
+            mmLeft = 8721
+            mmTop = 0
+            mmWidth = 17198
+            BandType = 4
+            LayerName = Foreground1
+          end
+          object ppDBText2: TppDBText
+            DesignLayer = ppDesignLayer2
+            UserName = 'DBText2'
+            Border.mmPadding = 0
+            DataField = 'DESCRIP'
+            DataPipeline = daFireDACQueryDataView1.COMIVTA
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'COMIVTA'
+            mmHeight = 4498
+            mmLeft = 57688
+            mmTop = 0
+            mmWidth = 76513
+            BandType = 4
+            LayerName = Foreground1
+          end
+          object ppDBText3: TppDBText
+            DesignLayer = ppDesignLayer2
+            UserName = 'DBText3'
+            Border.mmPadding = 0
+            DataField = 'numerod'
+            DataPipeline = daFireDACQueryDataView1.COMIVTA
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'COMIVTA'
+            mmHeight = 4498
+            mmLeft = 26182
+            mmTop = 0
+            mmWidth = 30978
+            BandType = 4
+            LayerName = Foreground1
+          end
+          object ppDBText4: TppDBText
+            DesignLayer = ppDesignLayer2
+            UserName = 'DBText4'
+            Border.mmPadding = 0
+            DataField = 'monto'
+            DataPipeline = daFireDACQueryDataView1.COMIVTA
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMIVTA'
+            mmHeight = 4498
+            mmLeft = 134730
+            mmTop = 0
+            mmWidth = 25135
+            BandType = 4
+            LayerName = Foreground1
+          end
+          object ppDBText11: TppDBText
+            DesignLayer = ppDesignLayer2
+            UserName = 'DBText11'
+            Border.mmPadding = 0
+            DataField = 'porct'
+            DataPipeline = daFireDACQueryDataView1.COMIVTA
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMIVTA'
+            mmHeight = 4498
+            mmLeft = 160394
+            mmTop = 0
+            mmWidth = 12966
+            BandType = 4
+            LayerName = Foreground1
+          end
+          object ppDBText12: TppDBText
+            DesignLayer = ppDesignLayer2
+            UserName = 'DBText101'
+            Border.mmPadding = 0
+            DataField = 'Comision'
+            DataPipeline = daFireDACQueryDataView1.COMIVTA
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMIVTA'
+            mmHeight = 4498
+            mmLeft = 173888
+            mmTop = 0
+            mmWidth = 21167
+            BandType = 4
+            LayerName = Foreground1
+          end
+        end
+        object ppFooterBand2: TppFooterBand
+          Background.Brush.Style = bsClear
+          Border.mmPadding = 0
+          PrintOnLastPage = False
+          mmBottomOffset = 0
+          mmHeight = 4763
+          mmPrintPosition = 0
+          object ppDBCalc9: TppDBCalc
+            DesignLayer = ppDesignLayer2
+            UserName = 'TotComiVta1'
+            Border.mmPadding = 0
+            DataField = 'Comision'
+            DataPipeline = daFireDACQueryDataView1.COMIVTA
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMIVTA'
+            mmHeight = 4498
+            mmLeft = 173842
+            mmTop = 265
+            mmWidth = 21167
+            BandType = 8
+            LayerName = Foreground1
+          end
+          object ppDBCalc10: TppDBCalc
+            DesignLayer = ppDesignLayer2
+            UserName = 'TotVentas1'
+            Border.mmPadding = 0
+            DataField = 'monto'
+            DataPipeline = daFireDACQueryDataView1.COMIVTA
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMIVTA'
+            mmHeight = 4498
+            mmLeft = 134684
+            mmTop = 265
+            mmWidth = 25135
+            BandType = 8
+            LayerName = Foreground1
+          end
+          object ppLabel29: TppLabel
+            DesignLayer = ppDesignLayer2
+            UserName = 'Label29'
+            Border.mmPadding = 0
+            Caption = 'Totales ventas'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3440
+            mmLeft = 109019
+            mmTop = 529
+            mmWidth = 22225
+            BandType = 8
+            LayerName = Foreground1
+          end
+        end
+        object ppSummaryBand1: TppSummaryBand
+          Background.Brush.Style = bsClear
+          Border.mmPadding = 0
+          mmBottomOffset = 0
+          mmHeight = 5027
+          mmPrintPosition = 0
+          object ppDBCalc5: TppDBCalc
+            DesignLayer = ppDesignLayer2
+            UserName = 'TotComiVta'
+            Border.mmPadding = 0
+            DataField = 'Comision'
+            DataPipeline = daFireDACQueryDataView1.COMIVTA
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMIVTA'
+            mmHeight = 4498
+            mmLeft = 173888
+            mmTop = 264
+            mmWidth = 21167
+            BandType = 7
+            LayerName = Foreground1
+          end
+          object ppDBCalc6: TppDBCalc
+            DesignLayer = ppDesignLayer2
+            UserName = 'TotVentas'
+            Border.mmPadding = 0
+            DataField = 'monto'
+            DataPipeline = daFireDACQueryDataView1.COMIVTA
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMIVTA'
+            mmHeight = 4498
+            mmLeft = 134730
+            mmTop = 264
+            mmWidth = 25135
+            BandType = 7
+            LayerName = Foreground1
+          end
+          object ppLabel30: TppLabel
+            DesignLayer = ppDesignLayer2
+            UserName = 'Label30'
+            Border.mmPadding = 0
+            Caption = 'Totales ventas'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3440
+            mmLeft = 109019
+            mmTop = 529
+            mmWidth = 22225
+            BandType = 7
+            LayerName = Foreground1
+          end
+        end
+        object raCodeModule2: TraCodeModule
+          object raProgramInfo5: TraProgramInfo
+            raClassName = 'TraEventHandler'
+            raProgram.ProgramName = 'DetailAfterPrint'
+            raProgram.ProgramType = ttProcedure
+            raProgram.Source = 
+              'procedure DetailAfterPrint;'#13#10'begin'#13#10'   TotComisiones:=TotComisio' +
+              'nes+COMIVTA['#39'Comision'#39'];'#13#10'end;'#13#10
+            raProgram.ComponentName = 'Detail'
+            raProgram.EventName = 'AfterPrint'
+            raProgram.EventID = 23
+            raProgram.CaretPos = (
+              52
+              3)
+          end
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer2: TppDesignLayer
+            UserName = 'Foreground1'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppSubReport2: TppSubReport
+      DesignLayer = ppDesignLayer1
+      UserName = 'SubReport2'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ShiftRelativeTo = ppSubReport1
+      TraverseAllData = False
+      DataPipelineName = 'COMICOBRO'
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 5026
+      mmWidth = 197300
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport2: TppChildReport
+        AutoStop = False
+        DataPipeline = daFireDACQueryDataView3.COMICOBRO
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.Duplex = dpNone
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 6350
+        PrinterSetup.mmMarginLeft = 6350
+        PrinterSetup.mmMarginRight = 6350
+        PrinterSetup.mmMarginTop = 6350
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Template.DatabaseSettings.NameField = 'ItemName'
+        Template.DatabaseSettings.TemplateField = 'Template'
+        Template.SaveTo = stDatabase
+        Version = '21.03'
+        mmColumnWidth = 0
+        DataPipelineName = 'COMICOBRO'
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          Border.mmPadding = 0
+          mmBottomOffset = 0
+          mmHeight = 10848
+          mmPrintPosition = 0
+          object ppLabel7: TppLabel
+            DesignLayer = ppDesignLayer3
+            UserName = 'Label7'
+            AutoSize = False
+            Border.mmPadding = 0
+            Caption = 'Fecha'
+            Color = 13209
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            mmHeight = 3969
+            mmLeft = 506
+            mmTop = 6877
+            mmWidth = 17198
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel8: TppLabel
+            DesignLayer = ppDesignLayer3
+            UserName = 'Label8'
+            AutoSize = False
+            Border.mmPadding = 0
+            Caption = 'Recibo'
+            Color = 13209
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            mmHeight = 3969
+            mmLeft = 18233
+            mmTop = 6877
+            mmWidth = 25400
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel9: TppLabel
+            DesignLayer = ppDesignLayer3
+            UserName = 'Label9'
+            AutoSize = False
+            Border.mmPadding = 0
+            Caption = 'Descripci'#243'n'
+            Color = 13209
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            mmHeight = 3969
+            mmLeft = 70115
+            mmTop = 6877
+            mmWidth = 64029
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel10: TppLabel
+            DesignLayer = ppDesignLayer3
+            UserName = 'Label10'
+            AutoSize = False
+            Border.mmPadding = 0
+            Caption = 'Monto'
+            Color = 13209
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            mmHeight = 3969
+            mmLeft = 134730
+            mmTop = 6877
+            mmWidth = 25135
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel11: TppLabel
+            DesignLayer = ppDesignLayer3
+            UserName = 'Label11'
+            AutoSize = False
+            Border.mmPadding = 0
+            Caption = '% comis'
+            Color = 13209
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            mmHeight = 3969
+            mmLeft = 160394
+            mmTop = 6877
+            mmWidth = 12965
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel12: TppLabel
+            DesignLayer = ppDesignLayer3
+            UserName = 'Label12'
+            AutoSize = False
+            Border.mmPadding = 0
+            Caption = 'Monto comision'
+            Color = 13209
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            mmHeight = 3969
+            mmLeft = 173888
+            mmTop = 6877
+            mmWidth = 21167
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel14: TppLabel
+            DesignLayer = ppDesignLayer3
+            UserName = 'Label14'
+            Border.mmPadding = 0
+            Caption = 'Comisiones por cobros'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 79375
+            mmTop = 264
+            mmWidth = 38365
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel34: TppLabel
+            DesignLayer = ppDesignLayer3
+            UserName = 'Label34'
+            AutoSize = False
+            Border.mmPadding = 0
+            Caption = 'Factura'
+            Color = 13209
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            mmHeight = 3969
+            mmLeft = 44225
+            mmTop = 6879
+            mmWidth = 25400
+            BandType = 1
+            LayerName = Foreground2
+          end
+        end
+        object ppDetailBand3: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          Border.mmPadding = 0
+          mmBottomOffset = 0
+          mmHeight = 5027
+          mmPrintPosition = 0
+          object ppDBText9: TppDBText
+            DesignLayer = ppDesignLayer3
+            UserName = 'DBText9'
+            Border.mmPadding = 0
+            DataField = 'ultimopago'
+            DataPipeline = daFireDACQueryDataView3.COMICOBRO
+            DisplayFormat = 'dd/mm/yyyy'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'COMICOBRO'
+            mmHeight = 4498
+            mmLeft = 506
+            mmTop = 265
+            mmWidth = 17198
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText10: TppDBText
+            DesignLayer = ppDesignLayer3
+            UserName = 'DBText10'
+            Border.mmPadding = 0
+            DataField = 'DESCRIP'
+            DataPipeline = daFireDACQueryDataView3.COMICOBRO
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'COMICOBRO'
+            mmHeight = 4498
+            mmLeft = 70115
+            mmTop = 265
+            mmWidth = 64029
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText13: TppDBText
+            DesignLayer = ppDesignLayer3
+            UserName = 'DBText13'
+            Border.mmPadding = 0
+            DataField = 'numerod'
+            DataPipeline = daFireDACQueryDataView3.COMICOBRO
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'COMICOBRO'
+            mmHeight = 4498
+            mmLeft = 18233
+            mmTop = 265
+            mmWidth = 25400
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText14: TppDBText
+            DesignLayer = ppDesignLayer3
+            UserName = 'DBText14'
+            Border.mmPadding = 0
+            DataField = 'monto'
+            DataPipeline = daFireDACQueryDataView3.COMICOBRO
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMICOBRO'
+            mmHeight = 4498
+            mmLeft = 134730
+            mmTop = 265
+            mmWidth = 25135
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText15: TppDBText
+            DesignLayer = ppDesignLayer3
+            UserName = 'DBText15'
+            Border.mmPadding = 0
+            DataField = 'porct'
+            DataPipeline = daFireDACQueryDataView3.COMICOBRO
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMICOBRO'
+            mmHeight = 4498
+            mmLeft = 160394
+            mmTop = 265
+            mmWidth = 12965
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText16: TppDBText
+            DesignLayer = ppDesignLayer3
+            UserName = 'DBText16'
+            Border.mmPadding = 0
+            DataField = 'Comision'
+            DataPipeline = daFireDACQueryDataView3.COMICOBRO
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMICOBRO'
+            mmHeight = 4498
+            mmLeft = 173888
+            mmTop = 265
+            mmWidth = 21167
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText23: TppDBText
+            DesignLayer = ppDesignLayer3
+            UserName = 'DBText23'
+            Border.mmPadding = 0
+            DataField = 'NumeroD'
+            DataPipeline = daFireDACQueryDataView3.COMICOBRO
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'COMICOBRO'
+            mmHeight = 4498
+            mmLeft = 44170
+            mmTop = 265
+            mmWidth = 25400
+            BandType = 4
+            LayerName = Foreground2
+          end
+        end
+        object ppFooterBand3: TppFooterBand
+          Background.Brush.Style = bsClear
+          Border.mmPadding = 0
+          PrintOnLastPage = False
+          mmBottomOffset = 0
+          mmHeight = 4498
+          mmPrintPosition = 0
+          object ppDBCalc11: TppDBCalc
+            DesignLayer = ppDesignLayer3
+            UserName = 'TotCobros1'
+            Border.mmPadding = 0
+            DataField = 'monto'
+            DataPipeline = daFireDACQueryDataView3.COMICOBRO
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMICOBRO'
+            mmHeight = 4498
+            mmLeft = 134684
+            mmTop = 0
+            mmWidth = 25135
+            BandType = 8
+            LayerName = Foreground2
+          end
+          object ppDBCalc12: TppDBCalc
+            DesignLayer = ppDesignLayer3
+            UserName = 'TotComiCob1'
+            Border.mmPadding = 0
+            DataField = 'Comision'
+            DataPipeline = daFireDACQueryDataView3.COMICOBRO
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMICOBRO'
+            mmHeight = 4498
+            mmLeft = 173842
+            mmTop = 0
+            mmWidth = 21167
+            BandType = 8
+            LayerName = Foreground2
+          end
+          object ppLabel31: TppLabel
+            DesignLayer = ppDesignLayer3
+            UserName = 'Label31'
+            Border.mmPadding = 0
+            Caption = 'Totales cobros'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 4498
+            mmLeft = 109284
+            mmTop = 0
+            mmWidth = 21960
+            BandType = 8
+            LayerName = Foreground2
+          end
+        end
+        object ppSummaryBand2: TppSummaryBand
+          Background.Brush.Style = bsClear
+          Border.mmPadding = 0
+          mmBottomOffset = 0
+          mmHeight = 4498
+          mmPrintPosition = 0
+          object ppDBCalc7: TppDBCalc
+            DesignLayer = ppDesignLayer3
+            UserName = 'TotCobros'
+            Border.mmPadding = 0
+            DataField = 'monto'
+            DataPipeline = daFireDACQueryDataView3.COMICOBRO
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMICOBRO'
+            mmHeight = 4498
+            mmLeft = 134992
+            mmTop = 0
+            mmWidth = 25135
+            BandType = 7
+            LayerName = Foreground2
+          end
+          object ppDBCalc8: TppDBCalc
+            DesignLayer = ppDesignLayer3
+            UserName = 'TotComiCob'
+            Border.mmPadding = 0
+            DataField = 'Comision'
+            DataPipeline = daFireDACQueryDataView3.COMICOBRO
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMICOBRO'
+            mmHeight = 4498
+            mmLeft = 174150
+            mmTop = 0
+            mmWidth = 21167
+            BandType = 7
+            LayerName = Foreground2
+          end
+          object ppLabel32: TppLabel
+            DesignLayer = ppDesignLayer3
+            UserName = 'Label32'
+            Border.mmPadding = 0
+            Caption = 'Totales cobros'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+            FormFieldSettings.FormFieldType = fftNone
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 4498
+            mmLeft = 109549
+            mmTop = 0
+            mmWidth = 21960
+            BandType = 7
+            LayerName = Foreground2
+          end
+        end
+        object raCodeModule3: TraCodeModule
+          object raProgramInfo6: TraProgramInfo
+            raClassName = 'TraEventHandler'
+            raProgram.ProgramName = 'DetailAfterPrint'
+            raProgram.ProgramType = ttProcedure
+            raProgram.Source = 
+              'procedure DetailAfterPrint;'#13#10'begin'#13#10'  TotComisiones:=TotComision' +
+              'es+COMICOBRO['#39'COMISION'#39'];'#13#10'end;'#13#10
+            raProgram.ComponentName = 'Detail'
+            raProgram.EventName = 'AfterPrint'
+            raProgram.EventID = 23
+            raProgram.CaretPos = (
+              53
+              3)
+          end
+        end
+        object ppDesignLayers3: TppDesignLayers
+          object ppDesignLayer3: TppDesignLayer
+            UserName = 'Foreground2'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppSubReport3: TppSubReport
+      DesignLayer = ppDesignLayer1
+      UserName = 'SubReport3'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ShiftRelativeTo = ppSubReport2
+      TraverseAllData = False
+      DataPipelineName = 'COMITABL'
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 10054
+      mmWidth = 197300
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport3: TppChildReport
+        AutoStop = False
+        DataPipeline = daFireDACQueryDataView4.COMITABL
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.Duplex = dpNone
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 6350
+        PrinterSetup.mmMarginLeft = 6350
+        PrinterSetup.mmMarginRight = 6350
+        PrinterSetup.mmMarginTop = 6350
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Template.DatabaseSettings.NameField = 'ItemName'
+        Template.DatabaseSettings.TemplateField = 'Template'
+        Template.SaveTo = stDatabase
+        Version = '21.03'
+        mmColumnWidth = 0
+        DataPipelineName = 'COMITABL'
+        object ppDetailBand4: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          Border.mmPadding = 0
+          mmBottomOffset = 0
+          mmHeight = 4498
+          mmPrintPosition = 0
+          object ppDBText17: TppDBText
+            DesignLayer = ppDesignLayer4
+            UserName = 'DBText17'
+            Border.mmPadding = 0
+            DataField = 'Desde'
+            DataPipeline = daFireDACQueryDataView4.COMITABL
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMITABL'
+            mmHeight = 4498
+            mmLeft = 68623
+            mmTop = 0
+            mmWidth = 27781
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText18: TppDBText
+            DesignLayer = ppDesignLayer4
+            UserName = 'DBText18'
+            Border.mmPadding = 0
+            DataField = 'Hasta'
+            DataPipeline = daFireDACQueryDataView4.COMITABL
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMITABL'
+            mmHeight = 4498
+            mmLeft = 97724
+            mmTop = 0
+            mmWidth = 27781
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText19: TppDBText
+            DesignLayer = ppDesignLayer4
+            UserName = 'DBText19'
+            Border.mmPadding = 0
+            DataField = 'MontoA'
+            DataPipeline = daFireDACQueryDataView4.COMITABL
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMITABL'
+            mmHeight = 4498
+            mmLeft = 126586
+            mmTop = 0
+            mmWidth = 27781
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText20: TppDBText
+            DesignLayer = ppDesignLayer4
+            UserName = 'DBText20'
+            Border.mmPadding = 0
+            DataField = 'Porct'
+            DataPipeline = daFireDACQueryDataView4.COMITABL
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMITABL'
+            mmHeight = 4498
+            mmLeft = 155151
+            mmTop = 0
+            mmWidth = 12965
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText21: TppDBText
+            DesignLayer = ppDesignLayer4
+            UserName = 'DBText21'
+            Border.mmPadding = 0
+            DataField = 'Comision'
+            DataPipeline = daFireDACQueryDataView4.COMITABL
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Tahoma'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'COMITABL'
+            mmHeight = 4498
+            mmLeft = 169179
+            mmTop = 0
+            mmWidth = 25938
+            BandType = 4
+            LayerName = Foreground3
+          end
+        end
+        object ppGroup2: TppGroup
+          BreakName = 'TipoRgo'
+          DataPipeline = daFireDACQueryDataView4.COMITABL
+          GroupFileSettings.NewFile = False
+          GroupFileSettings.EmailFile = False
+          KeepTogether = True
+          OutlineSettings.CreateNode = True
+          StartOnOddPage = False
+          UserName = 'Group2'
+          mmNewColumnThreshold = 0
+          mmNewPageThreshold = 0
+          DataPipelineName = 'COMITABL'
+          NewFile = False
+          object ppGroupHeaderBand2: TppGroupHeaderBand
+            Background.Brush.Style = bsClear
+            Border.mmPadding = 0
+            mmBottomOffset = 0
+            mmHeight = 10583
+            mmPrintPosition = 0
+            object ppLabel20: TppLabel
+              DesignLayer = ppDesignLayer4
+              UserName = 'Label20'
+              Border.mmPadding = 0
+              Caption = 'Tipo de tabla'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Tahoma'
+              Font.Size = 10
+              Font.Style = [fsBold]
+              FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+              FormFieldSettings.FormFieldType = fftNone
+              Transparent = True
+              mmHeight = 4234
+              mmLeft = 5027
+              mmTop = 1058
+              mmWidth = 21961
+              BandType = 3
+              GroupNo = 0
+              LayerName = Foreground3
+            end
+            object ppLabel21: TppLabel
+              DesignLayer = ppDesignLayer4
+              UserName = 'Label21'
+              AutoSize = False
+              Border.mmPadding = 0
+              Caption = 'Desde'
+              Color = 13209
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Name = 'Arial'
+              Font.Size = 9
+              Font.Style = []
+              FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+              FormFieldSettings.FormFieldType = fftNone
+              TextAlignment = taCentered
+              mmHeight = 3969
+              mmLeft = 68623
+              mmTop = 6614
+              mmWidth = 27781
+              BandType = 3
+              GroupNo = 0
+              LayerName = Foreground3
+            end
+            object ppLabel22: TppLabel
+              DesignLayer = ppDesignLayer4
+              UserName = 'Label22'
+              AutoSize = False
+              Border.mmPadding = 0
+              Caption = 'Hasta'
+              Color = 13209
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Name = 'Arial'
+              Font.Size = 9
+              Font.Style = []
+              FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+              FormFieldSettings.FormFieldType = fftNone
+              TextAlignment = taCentered
+              mmHeight = 3969
+              mmLeft = 97725
+              mmTop = 6614
+              mmWidth = 27776
+              BandType = 3
+              GroupNo = 0
+              LayerName = Foreground3
+            end
+            object ppLabel24: TppLabel
+              DesignLayer = ppDesignLayer4
+              UserName = 'Label101'
+              AutoSize = False
+              Border.mmPadding = 0
+              Caption = 'Monto'
+              Color = 13209
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Name = 'Arial'
+              Font.Size = 9
+              Font.Style = []
+              FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+              FormFieldSettings.FormFieldType = fftNone
+              mmHeight = 3969
+              mmLeft = 126567
+              mmTop = 6614
+              mmWidth = 27785
+              BandType = 3
+              GroupNo = 0
+              LayerName = Foreground3
+            end
+            object ppLabel25: TppLabel
+              DesignLayer = ppDesignLayer4
+              UserName = 'Label25'
+              AutoSize = False
+              Border.mmPadding = 0
+              Caption = '% comis'
+              Color = 13209
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Name = 'Arial'
+              Font.Size = 9
+              Font.Style = []
+              FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+              FormFieldSettings.FormFieldType = fftNone
+              mmHeight = 3969
+              mmLeft = 155142
+              mmTop = 6614
+              mmWidth = 12965
+              BandType = 3
+              GroupNo = 0
+              LayerName = Foreground3
+            end
+            object ppLabel26: TppLabel
+              DesignLayer = ppDesignLayer4
+              UserName = 'Label26'
+              AutoSize = False
+              Border.mmPadding = 0
+              Caption = 'Monto comision'
+              Color = 13209
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Name = 'Arial'
+              Font.Size = 9
+              Font.Style = []
+              FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+              FormFieldSettings.FormFieldType = fftNone
+              mmHeight = 3969
+              mmLeft = 169165
+              mmTop = 6614
+              mmWidth = 25929
+              BandType = 3
+              GroupNo = 0
+              LayerName = Foreground3
+            end
+          end
+          object ppGroupFooterBand2: TppGroupFooterBand
+            Background.Brush.Style = bsClear
+            Border.mmPadding = 0
+            HideWhenOneDetail = False
+            mmBottomOffset = 0
+            mmHeight = 4498
+            mmPrintPosition = 0
+            object ppDBCalc3: TppDBCalc
+              DesignLayer = ppDesignLayer4
+              UserName = 'TotTipoTbl'
+              Border.mmPadding = 0
+              DataField = 'MontoA'
+              DataPipeline = daFireDACQueryDataView4.COMITABL
+              DisplayFormat = '#,0.00;-#,0.00'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Tahoma'
+              Font.Size = 8
+              Font.Style = [fsBold]
+              ResetGroup = ppGroup2
+              TextAlignment = taRightJustified
+              Transparent = True
+              DataPipelineName = 'COMITABL'
+              mmHeight = 4498
+              mmLeft = 126504
+              mmTop = 0
+              mmWidth = 27781
+              BandType = 5
+              GroupNo = 0
+              LayerName = Foreground3
+            end
+            object ppDBCalc4: TppDBCalc
+              DesignLayer = ppDesignLayer4
+              UserName = 'TotComiTbl'
+              Border.mmPadding = 0
+              DataField = 'Comision'
+              DataPipeline = daFireDACQueryDataView4.COMITABL
+              DisplayFormat = '#,0.00;-#,0.00'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Tahoma'
+              Font.Size = 8
+              Font.Style = [fsBold]
+              ResetGroup = ppGroup2
+              TextAlignment = taRightJustified
+              Transparent = True
+              DataPipelineName = 'COMITABL'
+              mmHeight = 4498
+              mmLeft = 169102
+              mmTop = 0
+              mmWidth = 25938
+              BandType = 5
+              GroupNo = 0
+              LayerName = Foreground3
+            end
+            object ppLabel33: TppLabel
+              DesignLayer = ppDesignLayer4
+              UserName = 'Label33'
+              Border.mmPadding = 0
+              Caption = 'Totales tabla'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Tahoma'
+              Font.Size = 8
+              Font.Style = [fsBold]
+              FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+              FormFieldSettings.FormFieldType = fftNone
+              TextAlignment = taRightJustified
+              Transparent = True
+              mmHeight = 4498
+              mmLeft = 105867
+              mmTop = 0
+              mmWidth = 19579
+              BandType = 5
+              GroupNo = 0
+              LayerName = Foreground3
+            end
+          end
+        end
+        object raCodeModule4: TraCodeModule
+          object raProgramInfo7: TraProgramInfo
+            raClassName = 'TraEventHandler'
+            raProgram.ProgramName = 'Label20OnPrint'
+            raProgram.ProgramType = ttProcedure
+            raProgram.Source = 
+              'procedure Label20OnPrint;'#13#10'begin'#13#10'  Case COMITABL['#39'TipoRgo'#39'] of'#13 +
+              #10'   4: label20.caption:='#39'Tabla de utilidad'#39';'#13#10'   5: label20.capt' +
+              'ion:='#39'Tabla de ventas'#39';'#13#10'   6: label20.caption:='#39'Tabla de cobran' +
+              'zas'#39';'#13#10'   7: label20.caption:='#39'Tabla de d'#237'as de cobros'#39';'#13#10'  end;' +
+              #13#10'end;'#13#10
+            raProgram.ComponentName = 'Label20'
+            raProgram.EventName = 'OnPrint'
+            raProgram.EventID = 32
+            raProgram.CaretPos = (
+              54
+              7)
+          end
+          object raProgramInfo8: TraProgramInfo
+            raClassName = 'TraEventHandler'
+            raProgram.ProgramName = 'DetailAfterPrint'
+            raProgram.ProgramType = ttProcedure
+            raProgram.Source = 
+              'procedure DetailAfterPrint;'#13#10'begin'#13#10'  TotComisiones:=TotComision' +
+              'es+COMITABL['#39'Comision'#39'];'#13#10'end;'#13#10
+            raProgram.ComponentName = 'Detail'
+            raProgram.EventName = 'AfterPrint'
+            raProgram.EventID = 23
+            raProgram.CaretPos = (
+              52
+              3)
+          end
+        end
+        object ppDesignLayers4: TppDesignLayers
+          object ppDesignLayer4: TppDesignLayer
+            UserName = 'Foreground3'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'CodVend'
+    DataPipeline = daFireDACQueryDataView2.Vendedores
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Vendedores'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      Border.mmPadding = 0
+      mmBottomOffset = 0
+      mmHeight = 4498
+      mmPrintPosition = 0
+      object ppDBText5: TppDBText
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBText5'
+        Border.mmPadding = 0
+        Color = 16777164
+        DataField = 'CodVend'
+        DataPipeline = daFireDACQueryDataView2.Vendedores
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Tahoma'
+        Font.Size = 10
+        Font.Style = []
+        DataPipelineName = 'Vendedores'
+        mmHeight = 4498
+        mmLeft = 265
+        mmTop = 0
+        mmWidth = 25680
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBText6: TppDBText
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBText6'
+        Border.mmPadding = 0
+        Color = 16777164
+        DataField = 'Descrip'
+        DataPipeline = daFireDACQueryDataView2.Vendedores
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Tahoma'
+        Font.Size = 10
+        Font.Style = []
+        DataPipelineName = 'Vendedores'
+        mmHeight = 4498
+        mmLeft = 26738
+        mmTop = 0
+        mmWidth = 77545
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBText7: TppDBText
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBText7'
+        Border.mmPadding = 0
+        Color = 16777164
+        DataField = 'Clase'
+        DataPipeline = daFireDACQueryDataView2.Vendedores
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Tahoma'
+        Font.Size = 10
+        Font.Style = []
+        DataPipelineName = 'Vendedores'
+        mmHeight = 4498
+        mmLeft = 105077
+        mmTop = 0
+        mmWidth = 27781
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBText8: TppDBText
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBText8'
+        Border.mmPadding = 0
+        Color = 16777164
+        DataField = 'Telef'
+        DataPipeline = daFireDACQueryDataView2.Vendedores
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Tahoma'
+        Font.Size = 10
+        Font.Style = []
+        DataPipelineName = 'Vendedores'
+        mmHeight = 4498
+        mmLeft = 133653
+        mmTop = 0
+        mmWidth = 53995
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      Border.mmPadding = 0
+      PrintHeight = phDynamic
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 5027
+      mmPrintPosition = 0
+      object ppVariable1: TppVariable
+        DesignLayer = ppDesignLayer1
+        UserName = 'vaTotalComi'
+        Border.mmPadding = 0
+        BlankWhenZero = False
+        CalcOrder = 0
+        DataType = dtCurrency
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 176242
+        mmTop = 529
+        mmWidth = 18786
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel23: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label23'
+        Border.mmPadding = 0
+        Caption = 'Total comisi'#243'n'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+        FormFieldSettings.FormFieldType = fftNone
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 141847
+        mmTop = 793
+        mmWidth = 21696
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daFireDACQueryDataView1: TdaFireDACQueryDataView
+      UserName = 'Query_COMIVTA'
+      Height = 259
+      Left = 343
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 6
+      TypeColumnWidth = 52
+      Width = 268
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Vendedores'
+      object COMIVTA: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'COMIVTA'
+        MasterDataPipelineName = 'Vendedores'
+        object ppField1: TppField
+          FieldAlias = 'CodVend'
+          FieldName = 'CodVend'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 0
+        end
+        object ppField2: TppField
+          FieldAlias = 'tipofac'
+          FieldName = 'tipofac'
+          FieldLength = 1
+          DisplayWidth = 1
+          Position = 1
+        end
+        object ppField3: TppField
+          FieldAlias = 'fechae'
+          FieldName = 'fechae'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 2
+        end
+        object ppField4: TppField
+          FieldAlias = 'numerod'
+          FieldName = 'numerod'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 3
+        end
+        object ppField5: TppField
+          FieldAlias = 'CodClie'
+          FieldName = 'CodClie'
+          FieldLength = 15
+          DisplayWidth = 15
+          Position = 4
+        end
+        object ppField6: TppField
+          FieldAlias = 'Descrip'
+          FieldName = 'Descrip'
+          FieldLength = 60
+          DisplayWidth = 60
+          Position = 5
+        end
+        object ppField7: TppField
+          FieldAlias = 'monto'
+          FieldName = 'monto'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 35
+          Position = 6
+        end
+        object ppField8: TppField
+          FieldAlias = 'Comision'
+          FieldName = 'Comision'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 35
+          Position = 7
+        end
+        object ppField9: TppField
+          FieldAlias = 'porct'
+          FieldName = 'porct'
+          FieldLength = 6
+          DataType = dtDouble
+          DisplayWidth = 39
+          Position = 8
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'COMIVTA'
+        EditSQLAsText = True
+        LinkColor = clMaroon
+        LinkType = ltParameterizedSQL
+        MaxSQLFieldAliasLength = 0
+        SQLText.Strings = (
+          
+            'SELECT fa.codvend CodVend, fa.tipofac, fa.fechae, fa.numerod, fa' +
+            '.CodClie, fa.Descrip,    '
+          
+            '       FA.SIGNO*fa.monto as monto, FA.SIGNO*fa.MtoComiVta as Com' +
+            'ision,  '
+          '       COALESCE(fa.MtoComiVta/Nullif(fa.Monto,0)*100,0) as porct'
+          '  FROM SAFACT FA'
+          ' WHERE --(fa.MtoComiVta+fa.MtoComiVtaD<>0) AND'
+          '       (FA.TIPOFAC IN ('#39'A'#39','#39'B'#39'))'
+          
+            '       AND (SUBSTRING(FA.CODSUCU,1,LEN(:CODSUCU+'#39#39'))=:CODSUCU+'#39#39 +
+            ')  '
+          
+            '       AND (CONVERT(DATETIME,:FECHAINI+'#39' 00:00:00'#39',120)<=fa.FECH' +
+            'AE) '
+          
+            '       AND (fa.FECHAE<=CONVERT(DATETIME,:FECHAFIN+'#39' 23:59:59'#39',12' +
+            '0))'
+          ' ORDER BY fa.FechaE')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'CodVend'
+          DisplayWidth = 10
+          FieldAlias = 'CodVend'
+          FieldLength = 10
+          FieldName = 'CodVend'
+          SQLFieldName = 'CodVend'
+        end
+        object daField2: TdaField
+          Alias = 'tipofac'
+          DisplayWidth = 1
+          FieldAlias = 'tipofac'
+          FieldLength = 1
+          FieldName = 'tipofac'
+          SQLFieldName = 'tipofac'
+        end
+        object daField3: TdaField
+          Alias = 'fechae'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'fechae'
+          FieldLength = 0
+          FieldName = 'fechae'
+          SQLFieldName = 'fechae'
+        end
+        object daField4: TdaField
+          Alias = 'numerod'
+          DisplayWidth = 20
+          FieldAlias = 'numerod'
+          FieldLength = 20
+          FieldName = 'numerod'
+          SQLFieldName = 'numerod'
+        end
+        object daField5: TdaField
+          Alias = 'CodClie'
+          DisplayWidth = 15
+          FieldAlias = 'CodClie'
+          FieldLength = 15
+          FieldName = 'CodClie'
+          SQLFieldName = 'CodClie'
+        end
+        object daField6: TdaField
+          Alias = 'Descrip'
+          DisplayWidth = 60
+          FieldAlias = 'Descrip'
+          FieldLength = 60
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+        end
+        object daField7: TdaField
+          Alias = 'monto'
+          DataType = dtDouble
+          DisplayWidth = 35
+          FieldAlias = 'monto'
+          FieldLength = 4
+          FieldName = 'monto'
+          SQLFieldName = 'monto'
+        end
+        object daField8: TdaField
+          Alias = 'Comision'
+          DataType = dtDouble
+          DisplayWidth = 35
+          FieldAlias = 'Comision'
+          FieldLength = 4
+          FieldName = 'Comision'
+          SQLFieldName = 'Comision'
+        end
+        object daField9: TdaField
+          Alias = 'porct'
+          DataType = dtDouble
+          DisplayWidth = 39
+          FieldAlias = 'porct'
+          FieldLength = 6
+          FieldName = 'porct'
+          SQLFieldName = 'porct'
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField10: TdaField
+            ChildType = 10
+            Alias = 'Cod_Vendedor'
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Vendedor'
+            FieldLength = 10
+            FieldName = 'CodVend'
+            SQLFieldName = 'CodVend'
+            TableAlias = 'Vendedores'
+            TableName = 'SAVEND'
+            TableSQLAlias = 'SAVEND'
+          end
+          object daField11: TdaField
+            ChildType = 11
+            Alias = 'codvend'
+            DisplayWidth = 10
+            FieldAlias = 'codvend'
+            FieldLength = 10
+            FieldName = 'codvend'
+            SQLFieldName = 'codvend'
+          end
+        end
+      end
+    end
+    object daFireDACQueryDataView2: TdaFireDACQueryDataView
+      UserName = 'Query_Vendedores'
+      Height = 284
+      Left = 43
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 1
+      Top = 5
+      TypeColumnWidth = 52
+      Width = 269
+      AutoSearchTabOrder = 0
+      object Vendedores: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Vendedores'
+        object ppField1: TppField
+          FieldAlias = 'CodVend'
+          FieldName = 'CodVend'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 0
+        end
+        object ppField2: TppField
+          FieldAlias = 'Descrip'
+          FieldName = 'Descrip'
+          FieldLength = 60
+          DisplayWidth = 60
+          Position = 1
+        end
+        object ppField3: TppField
+          FieldAlias = 'Clase'
+          FieldName = 'Clase'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 2
+        end
+        object ppField4: TppField
+          FieldAlias = 'Direc1'
+          FieldName = 'Direc1'
+          FieldLength = 60
+          DisplayWidth = 60
+          Position = 3
+        end
+        object ppField5: TppField
+          FieldAlias = 'Direc2'
+          FieldName = 'Direc2'
+          FieldLength = 60
+          DisplayWidth = 60
+          Position = 4
+        end
+        object ppField6: TppField
+          FieldAlias = 'Email'
+          FieldName = 'Email'
+          FieldLength = 60
+          DisplayWidth = 60
+          Position = 5
+        end
+        object ppField7: TppField
+          FieldAlias = 'ID3'
+          FieldName = 'ID3'
+          FieldLength = 25
+          DisplayWidth = 25
+          Position = 6
+        end
+        object ppField8: TppField
+          FieldAlias = 'Movil'
+          FieldName = 'Movil'
+          FieldLength = 15
+          DisplayWidth = 15
+          Position = 7
+        end
+        object ppField9: TppField
+          FieldAlias = 'Telef'
+          FieldName = 'Telef'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 8
+        end
+        object ppField10: TppField
+          FieldAlias = 'Activo'
+          FieldName = 'Activo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 9
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Vendedores'
+        EditSQLAsText = True
+        LinkColor = clNavy
+        LinkType = ltParameterizedSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          '/*    '
+          
+            ' ***************************************************************' +
+            '*************** '
+          ' '
+          ' COMISIONES DE VENDEDOR                                       '
+          ' '
+          
+            ' Copyright (c) 2017 Guillermo J. Rivero and SAINT DE VENEZUELA T' +
+            'eam        '
+          
+            ' ***************************************************************' +
+            '*************** '
+          
+            ' Licensed under the Apache License, Version 2.0 (the "License");' +
+            '             '
+          
+            ' you may not use this file except in compliance with the License' +
+            '.            '
+          ''
+          
+            ' You may obtain a copy of the License at www.apache.org/licenses' +
+            '/LICENSE-2.0                                    '
+          
+            '                                                                ' +
+            '              '
+          
+            ' Unless required by applicable law or agreed to in writing, soft' +
+            'ware         '
+          
+            ' distributed under the License is distributed on an "AS IS" BASI' +
+            'S,           '
+          
+            ' WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or' +
+            ' implied.    '
+          
+            ' See the License for the specific language governing permissions' +
+            ' and         '
+          
+            ' limitations under the License.                                 ' +
+            '             '
+          
+            ' ***************************************************************' +
+            '*************** '
+          '*/'
+          'SELECT CodVend, Descrip, '
+          '       Clase, Direc1, '
+          '       Direc2, Email, ID3, '
+          '       Movil, Telef, Activo'
+          'FROM SAVEND '
+          'WHERE (ACTIVO>0) AND'
+          '      (SUBSTRING(CODVEND,1,LEN(:CODVEND1+'#39#39'))>=:CODVEND1+'#39#39') AND'
+          '      (SUBSTRING(CODVEND,1,LEN(:CODVEND2+'#39#39'))<=:CODVEND2+'#39#39') '
+          '')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'CodVend'
+          DisplayWidth = 10
+          FieldAlias = 'CodVend'
+          FieldLength = 10
+          FieldName = 'CodVend'
+          SQLFieldName = 'CodVend'
+        end
+        object daField2: TdaField
+          Alias = 'Descrip'
+          DisplayWidth = 60
+          FieldAlias = 'Descrip'
+          FieldLength = 60
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+        end
+        object daField3: TdaField
+          Alias = 'Clase'
+          DisplayWidth = 10
+          FieldAlias = 'Clase'
+          FieldLength = 10
+          FieldName = 'Clase'
+          SQLFieldName = 'Clase'
+        end
+        object daField4: TdaField
+          Alias = 'Direc1'
+          DisplayWidth = 60
+          FieldAlias = 'Direc1'
+          FieldLength = 60
+          FieldName = 'Direc1'
+          SQLFieldName = 'Direc1'
+        end
+        object daField5: TdaField
+          Alias = 'Direc2'
+          DisplayWidth = 60
+          FieldAlias = 'Direc2'
+          FieldLength = 60
+          FieldName = 'Direc2'
+          SQLFieldName = 'Direc2'
+        end
+        object daField6: TdaField
+          Alias = 'Email'
+          DisplayWidth = 60
+          FieldAlias = 'Email'
+          FieldLength = 60
+          FieldName = 'Email'
+          SQLFieldName = 'Email'
+        end
+        object daField7: TdaField
+          Alias = 'ID3'
+          DisplayWidth = 25
+          FieldAlias = 'ID3'
+          FieldLength = 25
+          FieldName = 'ID3'
+          SQLFieldName = 'ID3'
+        end
+        object daField8: TdaField
+          Alias = 'Movil'
+          DisplayWidth = 15
+          FieldAlias = 'Movil'
+          FieldLength = 15
+          FieldName = 'Movil'
+          SQLFieldName = 'Movil'
+        end
+        object daField9: TdaField
+          Alias = 'Telef'
+          DisplayWidth = 30
+          FieldAlias = 'Telef'
+          FieldLength = 30
+          FieldName = 'Telef'
+          SQLFieldName = 'Telef'
+        end
+        object daField10: TdaField
+          Alias = 'Activo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Activo'
+          FieldLength = 0
+          FieldName = 'Activo'
+          SQLFieldName = 'Activo'
+        end
+      end
+    end
+    object daFireDACQueryDataView3: TdaFireDACQueryDataView
+      UserName = 'Query_COMICOBRO'
+      Height = 250
+      Left = 343
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 270
+      TypeColumnWidth = 52
+      Width = 269
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Vendedores'
+      object COMICOBRO: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'COMICOBRO'
+        MasterDataPipelineName = 'Vendedores'
+        object ppField1: TppField
+          FieldAlias = 'codclie'
+          FieldName = 'codclie'
+          FieldLength = 15
+          DisplayWidth = 15
+          Position = 0
+        end
+        object ppField2: TppField
+          FieldAlias = 'Descrip'
+          FieldName = 'Descrip'
+          FieldLength = 60
+          DisplayWidth = 60
+          Position = 1
+        end
+        object ppField3: TppField
+          FieldAlias = 'NumeroD'
+          FieldName = 'NumeroD'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 2
+        end
+        object ppField4: TppField
+          FieldAlias = 'CodVend'
+          FieldName = 'CodVend'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 3
+        end
+        object ppField5: TppField
+          FieldAlias = 'ultimopago'
+          FieldName = 'ultimopago'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 4
+        end
+        object ppField6: TppField
+          FieldAlias = 'FechaV'
+          FieldName = 'FechaV'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 5
+        end
+        object ppField7: TppField
+          FieldAlias = 'Vencido'
+          FieldName = 'Vencido'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 6
+        end
+        object ppField8: TppField
+          FieldAlias = 'MONTO'
+          FieldName = 'MONTO'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 39
+          Position = 7
+        end
+        object ppField9: TppField
+          FieldAlias = 'COMISION'
+          FieldName = 'COMISION'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 39
+          Position = 8
+        end
+      end
+      object daSQL3: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'COMICOBRO'
+        EditSQLAsText = True
+        LinkColor = clGreen
+        LinkType = ltParameterizedSQL
+        MaxSQLFieldAliasLength = 0
+        SQLText.Strings = (
+          
+            'select  fapag.codclie, fapag.Descrip, fapag.NumeroD, fapag.CodVe' +
+            'nd, FechaP.ultimopago, fapag.FechaV, '
+          '    datediff (DAY, fapag.FechaV,FechaP.ultimopago) Vencido'
+          
+            #9#9', sum((CASE WHEN pagos.TIPOCXC LIKE '#39'3%'#39' THEN -1 ELSE 1 END)*(' +
+            'pagos.MONTO-pagos.MTOTAX)) AS MONTO '
+          
+            #9#9', sum((CASE WHEN pagos.TIPOCXC LIKE '#39'3%'#39' THEN -1 ELSE 1 END)*(' +
+            'pagos.Comision)) AS COMISION'
+          'from'#9
+          #9'(SELECT'
+          #9#9'fac.TipoCxc'
+          #9#9', cl.CodVend'
+          #9#9',cl.Descrip'
+          #9#9', pg.NroRegi'
+          #9#9', CC.codclie'
+          #9#9', fac.NroUnico'
+          #9#9', fac.FechaE'
+          #9#9', fac.FechaV'
+          #9#9', pg.NumeroD'
+          #9#9'FROM SAACXC CC WITH (NOLOCK)'
+          #9#9#9'INNER JOIN SACLIE CL '
+          #9#9#9#9#9'ON (CL.CodClie=CC.CodClie)'
+          #9#9#9'LEFT JOIN SAPAGCXC PG '
+          #9#9#9#9'ON (PG.NROPPAL=CC.NROUNICO)'
+          
+            #9#9#9'inner join SAACXC fac on fac.NumeroD = pg.NumeroD and fac.Tip' +
+            'oCxc = pg.tipocxc and fac.NroUnico = pg.NroRegi'
+          #9#9'WHERE ((CC.TipoCxc Like '#39'4%'#39') Or (CC.Tipocxc Like '#39'3%'#39')) '
+          #9#9#9'And (CC.EsReten=0) '
+          #9#9#9'AND (CC.FromTran=1) AND CC.TipoCxc IN ('#39'31'#39','#39'41'#39')'
+          
+            #9#9#9'AND'#9' (CONVERT(DATETIME,:FECHAINI+'#39' 00:00:00'#39',120)<=PG.FECHAE)' +
+            ' '
+          #9#9#9'AND (PG.FECHAE<=CONVERT(DATETIME,:FECHAFIN+'#39' 23:59:59'#39',120))'
+          #9#9#9'AND FAC.Saldo <=0'
+          
+            #9#9'group by pg.NroRegi, cc.CodClie,fac.FechaE, fac.TipoCxc, pg.Nu' +
+            'meroD, fac.FechaV, cl.CodVend, cl.Descrip, fac.NroUnico) fapag '
+          #9'inner join SAPAGCXC '
+          
+            #9#9'pagos on pagos.NumeroD = fapag.NumeroD  and pagos.NroRegi = fa' +
+            'pag.NroRegi '
+          
+            #9'inner join ( SELECT max (fechae)  AS ultimopago, nroregi, Numer' +
+            'oD,TipoCxc'
+          #9#9#9#9'FROM SAPAGCXC'
+          #9#9#9#9'where TipoCxc in (10,20)'
+          #9#9#9#9'group by NroRegi,NumeroD,TipoCxc) fechap '
+          
+            #9#9#9'on pagos.NumeroD = fechap.NumeroD and pagos.NroRegi = fechap.' +
+            'NroRegi'
+          
+            #9'group by fapag.CodClie,fapag.Descrip, fapag.NumeroD, fapag.CodV' +
+            'end,fechap.ultimopago,  fapag.FechaV '
+          '')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'codclie'
+          DisplayWidth = 15
+          FieldAlias = 'codclie'
+          FieldLength = 15
+          FieldName = 'codclie'
+          SQLFieldName = 'codclie'
+        end
+        object daField2: TdaField
+          Alias = 'Descrip'
+          DisplayWidth = 60
+          FieldAlias = 'Descrip'
+          FieldLength = 60
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+        end
+        object daField3: TdaField
+          Alias = 'NumeroD'
+          DisplayWidth = 20
+          FieldAlias = 'NumeroD'
+          FieldLength = 20
+          FieldName = 'NumeroD'
+          SQLFieldName = 'NumeroD'
+        end
+        object daField4: TdaField
+          Alias = 'CodVend'
+          DisplayWidth = 10
+          FieldAlias = 'CodVend'
+          FieldLength = 10
+          FieldName = 'CodVend'
+          SQLFieldName = 'CodVend'
+        end
+        object daField5: TdaField
+          Alias = 'ultimopago'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'ultimopago'
+          FieldLength = 0
+          FieldName = 'ultimopago'
+          SQLFieldName = 'ultimopago'
+        end
+        object daField6: TdaField
+          Alias = 'FechaV'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'FechaV'
+          FieldLength = 0
+          FieldName = 'FechaV'
+          SQLFieldName = 'FechaV'
+        end
+        object daField7: TdaField
+          Alias = 'Vencido'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Vencido'
+          FieldLength = 0
+          FieldName = 'Vencido'
+          SQLFieldName = 'Vencido'
+        end
+        object daField8: TdaField
+          Alias = 'MONTO'
+          DataType = dtDouble
+          DisplayWidth = 39
+          FieldAlias = 'MONTO'
+          FieldLength = 4
+          FieldName = 'MONTO'
+          SQLFieldName = 'MONTO'
+        end
+        object daField9: TdaField
+          Alias = 'COMISION'
+          DataType = dtDouble
+          DisplayWidth = 39
+          FieldAlias = 'COMISION'
+          FieldLength = 4
+          FieldName = 'COMISION'
+          SQLFieldName = 'COMISION'
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField10: TdaField
+            ChildType = 10
+            Alias = 'Cod_Vendedor'
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Vendedor'
+            FieldLength = 10
+            FieldName = 'CodVend'
+            SQLFieldName = 'CodVend'
+            TableAlias = 'Vendedores'
+            TableName = 'SAVEND'
+            TableSQLAlias = 'SAVEND'
+          end
+          object daField11: TdaField
+            ChildType = 11
+            Alias = 'codvend'
+            DisplayWidth = 10
+            FieldAlias = 'codvend'
+            FieldLength = 10
+            FieldName = 'codvend'
+            SQLFieldName = 'codvend'
+          end
+        end
+      end
+    end
+    object daFireDACQueryDataView4: TdaFireDACQueryDataView
+      UserName = 'Query_COMITABL'
+      Height = 225
+      Left = 343
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 525
+      TypeColumnWidth = 52
+      Width = 268
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Vendedores'
+      object COMITABL: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'COMITABL'
+        MasterDataPipelineName = 'Vendedores'
+        object ppField1: TppField
+          FieldAlias = 'CodVend'
+          FieldName = 'CodVend'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 0
+        end
+        object ppField2: TppField
+          FieldAlias = 'TipoRgo'
+          FieldName = 'TipoRgo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+        end
+        object ppField3: TppField
+          FieldAlias = 'Desde'
+          FieldName = 'Desde'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 29
+          Position = 2
+        end
+        object ppField4: TppField
+          FieldAlias = 'Hasta'
+          FieldName = 'Hasta'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 29
+          Position = 3
+        end
+        object ppField5: TppField
+          FieldAlias = 'Porct'
+          FieldName = 'Porct'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 29
+          Position = 4
+        end
+        object ppField6: TppField
+          FieldAlias = 'MontoA'
+          FieldName = 'MontoA'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 39
+          Position = 5
+        end
+        object ppField7: TppField
+          FieldAlias = 'Comision'
+          FieldName = 'Comision'
+          FieldLength = 6
+          DataType = dtDouble
+          DisplayWidth = 39
+          Position = 6
+        end
+      end
+      object daSQL4: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'COMITABL'
+        EditSQLAsText = True
+        LinkColor = clPurple
+        LinkType = ltParameterizedSQL
+        MaxSQLFieldAliasLength = 0
+        SQLText.Strings = (
+          
+            'SELECT V.CodVend, V.TipoRgo, V.Desde, V.Hasta, V.Porct, v.MontoA' +
+            ', v.Comision'
+          
+            '  FROM (SELECT tr.CodVend CodVend, CV.TipoRgo TipoRgo, CV.Desde ' +
+            'Desde, CV.Hasta Hasta, CV.Monto As Porct,'
+          
+            '               round((Case when (cv.desde<=sum(Tr.BASE)) And (Su' +
+            'm(TR.BASE)<=cv.Hasta) Then Sum(TR.BASE) else 0 end),2) AS MontoA' +
+            ','
+          
+            '               round((case when cv.tipoRgo in (4)   then -- Por ' +
+            'porcentaje de utilidad'
+          
+            '                                (Case when (cv.desde<=sum(Tr.Mon' +
+            'to)) And Sum(TR.Monto)<=cv.Hasta Then Sum(TR.BASE)*cv.monto/100 ' +
+            'else 0 end)'
+          
+            '                           when cv.tipoRgo in (5,6) then -- Por ' +
+            'Tabla de ventas o cobros'
+          
+            '                                (Case when (cv.desde<=sum(Tr.BAS' +
+            'E )) And Sum(TR.BASE )<=cv.Hasta Then Sum(TR.BASE)*cv.monto/100 ' +
+            'else 0 end)'
+          
+            '                                 when cv.tipoRgo in (7)   then -' +
+            '- Por dias de cobranza'
+          
+            '                        (Case when (cv.desde<=sum(Tr.MONTO)) And' +
+            ' Sum(TR.Monto)<=cv.Hasta Then'
+          
+            '                              Sum(TR.BASE)*cv.monto/100 else Sum' +
+            '(TR.BASE)*cv.monto/100 end) '
+          '              end),2) AS Comision'
+          '         FROM (-- tabla de utilidad --'
+          '               SELECT 4 AS Tipo, CODVEND, FECHAE'
+          '                      ,SIGNO*Monto_Utili   AS BASE'
+          '                      ,SIGNO*Monto_PorUtil AS MONTO'
+          '                 FROM VW_ADM_FACTURAS'
+          '                WHERE (Tipofac In ('#39'A'#39','#39'B'#39')) '
+          '              -- tabla de ventas --'
+          '                UNION ALL'
+          '               SELECT 5 as Tipo, CODVEND, FECHAE'
+          '                      ,Signo*monto AS BASE'
+          '                      ,Signo*monto AS MONTO'
+          '                 FROM VW_ADM_FACTURAS'
+          '                WHERE (Tipofac In ('#39'A'#39','#39'B'#39')) '
+          '              -- tabla de cobranzas --'
+          '                UNION ALL'
+          '               SELECT 6 As Tipo, CC.CODVEND, CC.FECHAE'
+          '                      ,CC.monto AS BASE'
+          '                      ,CC.monto AS MONTO'
+          '                 FROM ('
+          '                       SELECT FA.codvend, FA.fechae, '
+          #9#9'                          FA.CONTADO AS BASE, '
+          #9#9#9'                        FA.CONTADO AS MONTO'
+          '                         FROM VW_ADM_FACTURAS FA'
+          
+            '                        WHERE (FA.Tipofac In ('#39'A'#39','#39'B'#39')) And (FA.' +
+            'Contado<>0) '
+          '                        UNION ALL  '
+          '                       SELECT CC.CodVend, CC.FechaE, '
+          
+            #9#9'                          (CASE WHEN CC.TIPOCXC LIKE '#39'3%'#39' THEN' +
+            ' -1 ELSE 1 END)*ISNULL(PG.MONTO-PG.MTOTAX,CC.MONTO-CC.MTOTAX) AS' +
+            ' BASE, '
+          
+            '                              (CASE WHEN CC.TIPOCXC LIKE '#39'3%'#39' TH' +
+            'EN -1 ELSE 1 END)*ISNULL(PG.MONTO-PG.MTOTAX+PG.RetenIVA+CancelI,' +
+            'CC.MONTO-CC.MTOTAX) AS MONTO'
+          '                         FROM SAACXC CC'
+          #9#9'                          LEFT JOIN SAPAGCXC PG '
+          #9#9'                                 ON (PG.NROPPAL=CC.NROUNICO) '
+          
+            '                        WHERE ((CC.TipoCxc Like '#39'4%'#39') Or (CC.Tip' +
+            'ocxc Like '#39'3%'#39')) And '
+          
+            '                              (CC.EsReten=0) AND (CC.FromTran=1)' +
+            ' '
+          '                      ) CC'
+          '              -- tabla por dias de cobro ---'
+          '                UNION ALL'
+          '               SELECT 7 as Tipo, CC.CODVEND, PG.FECHAE'
+          
+            '                     ,(CASE WHEN CC.TIPOCXC LIKE '#39'3%'#39' THEN -1 EL' +
+            'SE 1 END)*ISNULL(PG.MONTO-PG.MTOTAX+PG.RetenIVA+CancelI,CC.MONTO' +
+            '-CC.MTOTAX) AS BASE '
+          
+            '                     ,ISNULL(DATEDIFF(DD,PG.FECHAO,PG.FECHAE),0)' +
+            ' AS MONTO'
+          '                 FROM SAACXC CC'
+          '                      LEFT JOIN SAPAGCXC PG '
+          #9#9#9'                       ON PG.NroPpal=CC.NroUnico'
+          
+            '                WHERE ((CC.TipoCxc Like '#39'4%'#39') Or (CC.Tipocxc Lik' +
+            'e '#39'3%'#39')) And '
+          '                      (CC.FromTran=1)  And (CC.EsReten=0)) TR'
+          '                      INNER JOIN SACVEN CV '
+          
+            #9#9#9'                        ON (cv.CodVend=tr.CodVend) and (tr.ti' +
+            'po=cv.TipoRgo)'
+          
+            '        WHERE (CONVERT(DATETIME,:FECHAINI+'#39' 00:00:00'#39',120)<=TR.F' +
+            'ECHAE) AND '
+          
+            '              (TR.FECHAE<=CONVERT(DATETIME,:FECHAFIN+'#39' 23:59:59'#39 +
+            ',120)) AND '
+          '              (CV.HASTA>CV.DESDE) AND (CV.Monto<>0)'
+          
+            '        group by tr.CodVend, CV.TipoRgo, cv.NroUnico, CV.DESDE, ' +
+            'CV.Hasta, cv.monto) V'
+          ' order by V.CODVEND, V.TipoRgo'
+          ''
+          '')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'CodVend'
+          DisplayWidth = 10
+          FieldAlias = 'CodVend'
+          FieldLength = 10
+          FieldName = 'CodVend'
+          SQLFieldName = 'CodVend'
+        end
+        object daField2: TdaField
+          Alias = 'TipoRgo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'TipoRgo'
+          FieldLength = 0
+          FieldName = 'TipoRgo'
+          SQLFieldName = 'TipoRgo'
+        end
+        object daField3: TdaField
+          Alias = 'Desde'
+          DataType = dtDouble
+          DisplayWidth = 29
+          FieldAlias = 'Desde'
+          FieldLength = 4
+          FieldName = 'Desde'
+          SQLFieldName = 'Desde'
+        end
+        object daField4: TdaField
+          Alias = 'Hasta'
+          DataType = dtDouble
+          DisplayWidth = 29
+          FieldAlias = 'Hasta'
+          FieldLength = 4
+          FieldName = 'Hasta'
+          SQLFieldName = 'Hasta'
+        end
+        object daField5: TdaField
+          Alias = 'Porct'
+          DataType = dtDouble
+          DisplayWidth = 29
+          FieldAlias = 'Porct'
+          FieldLength = 4
+          FieldName = 'Porct'
+          SQLFieldName = 'Porct'
+        end
+        object daField6: TdaField
+          Alias = 'MontoA'
+          DataType = dtDouble
+          DisplayWidth = 39
+          FieldAlias = 'MontoA'
+          FieldLength = 4
+          FieldName = 'MontoA'
+          SQLFieldName = 'MontoA'
+        end
+        object daField7: TdaField
+          Alias = 'Comision'
+          DataType = dtDouble
+          DisplayWidth = 39
+          FieldAlias = 'Comision'
+          FieldLength = 6
+          FieldName = 'Comision'
+          SQLFieldName = 'Comision'
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField8: TdaField
+            ChildType = 10
+            Alias = 'Cod_Vendedor'
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Vendedor'
+            FieldLength = 10
+            FieldName = 'CodVend'
+            SQLFieldName = 'CodVend'
+            TableAlias = 'Vendedores'
+            TableName = 'SAVEND'
+            TableSQLAlias = 'SAVEND'
+          end
+          object daField9: TdaField
+            ChildType = 11
+            Alias = 'CodVend'
+            DisplayWidth = 10
+            FieldAlias = 'CodVend'
+            FieldLength = 10
+            FieldName = 'CodVend'
+            SQLFieldName = 'CodVend'
+          end
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    object raProgramInfo9: TraProgramInfo
+      raClassName = 'TraVarProgram'
+      raProgram.ChildType = 17
+      raProgram.ProgramName = 'Variables'
+      raProgram.ProgramType = ttProcedure
+      raProgram.Source = 
+        'procedure Variables;'#13#10'var'#13#10'     TotComisiones: Extended;'#13#10#13#10'begi' +
+        'n'#13#10#13#10'end;'#13#10
+      raProgram.CaretPos = (
+        30
+        2)
+    end
+    object raProgramInfo10: TraProgramInfo
+      raClassName = 'TraEventHandler'
+      raProgram.ProgramName = 'ReportBeforeAutoSearchDialogCreate'
+      raProgram.ProgramType = ttProcedure
+      raProgram.Source = 
+        'procedure ReportBeforeAutoSearchDialogCreate;'#13#10'Var y, m, D: Inte' +
+        'ger;'#13#10'begin       '#13#10'  If Report.ShowAutoSearchDialog Then'#13#10'     ' +
+        'Begin'#13#10'       DecodeDate(CurrentDate,Y,M,D);'#13#10'       D:=1;'#13#10'    ' +
+        '   TotComisiones:=0;'#13#10'       Report.Parameters['#39'FECHAINI'#39']:=Enco' +
+        'deDate(Y,M,D);'#13#10'       Report.Parameters['#39'FECHAFIN'#39']:=CurrentDat' +
+        'e;'#13#10'       Report.Parameters['#39'CODSUCU'#39']:='#39'00000'#39';'#13#10'       Report' +
+        '.Parameters['#39'CODVEND1'#39']:='#39#39';'#13#10'       Report.Parameters['#39'CODVEND2' +
+        #39']:='#39#39';'#13#10'    end;'#13#10'end;                                         ' +
+        '     '#13#10#13#10#13#10
+      raProgram.ComponentName = 'Report'
+      raProgram.EventName = 'BeforeAutoSearchDialogCreate'
+      raProgram.EventID = 72
+      raProgram.CaretPos = (
+        44
+        11)
+    end
+    object raProgramInfo11: TraProgramInfo
+      raClassName = 'TraEventHandler'
+      raProgram.ProgramName = 'Group1AfterGroupBreak'
+      raProgram.ProgramType = ttProcedure
+      raProgram.Source = 
+        'procedure Group1AfterGroupBreak;'#13#10'begin'#13#10'  TotComisiones:=0;'#13#10'en' +
+        'd;'#13#10
+      raProgram.ComponentName = 'Group1'
+      raProgram.EventName = 'AfterGroupBreak'
+      raProgram.EventID = 27
+      raProgram.CaretPos = (
+        32
+        3)
+    end
+    object raProgramInfo12: TraProgramInfo
+      raClassName = 'TraEventHandler'
+      raProgram.ProgramName = 'GroupFooterBand1AfterGenerate'
+      raProgram.ProgramType = ttProcedure
+      raProgram.Source = 
+        'procedure GroupFooterBand1AfterGenerate;'#13#10'begin'#13#10'  vaTotalComi.v' +
+        'alue:=totComisiones;'#13#10'end;'#13#10
+      raProgram.ComponentName = 'GroupFooterBand1'
+      raProgram.EventName = 'AfterGenerate'
+      raProgram.EventID = 25
+      raProgram.CaretPos = (
+        3
+        3)
+    end
+    object raProgramInfo13: TraProgramInfo
+      raClassName = 'TraEventHandler'
+      raProgram.ProgramName = 'vaTotalComiOnCalc'
+      raProgram.ProgramType = ttProcedure
+      raProgram.Source = 
+        'procedure vaTotalComiOnCalc(var Value: Variant);'#13#10'begin'#13#10'  Value' +
+        ' := TotComisiones;'#13#10'end;'#13#10
+      raProgram.ComponentName = 'vaTotalComi'
+      raProgram.EventName = 'OnCalc'
+      raProgram.EventID = 33
+      raProgram.CaretPos = (
+        1
+        4)
+    end
+    object raProgramInfo14: TraProgramInfo
+      raClassName = 'TraEventHandler'
+      raProgram.ProgramName = 'vaFechaIOnCalc'
+      raProgram.ProgramType = ttProcedure
+      raProgram.Source = 
+        'procedure vaFechaIOnCalc(var Value: Variant);'#13#10'begin'#13#10#13#10'  Value ' +
+        ':=Report.Parameters['#39'FECHAINI'#39']; '#13#10#13#10'end;'#13#10
+      raProgram.ComponentName = 'vaFechaI'
+      raProgram.EventName = 'OnCalc'
+      raProgram.EventID = 33
+      raProgram.CaretPos = (
+        24
+        4)
+    end
+    object raProgramInfo15: TraProgramInfo
+      raClassName = 'TraEventHandler'
+      raProgram.ProgramName = 'vaFechaFOnCalc'
+      raProgram.ProgramType = ttProcedure
+      raProgram.Source = 
+        'procedure vaFechaFOnCalc(var Value: Variant);'#13#10'begin'#13#10#13#10'  Value ' +
+        ':=Report.Parameters['#39'FECHAFIN'#39']; '#13#10#13#10#13#10'end;'#13#10
+      raProgram.ComponentName = 'vaFechaF'
+      raProgram.EventName = 'OnCalc'
+      raProgram.EventID = 33
+      raProgram.CaretPos = (
+        38
+        4)
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground'
+      LayerType = ltBanded
+      Index = 0
+    end
+  end
+  object ppParameterList3: TppParameterList
+    object ppParameter1: TppParameter
+      AutoSearchSettings.Enabled = True
+      AutoSearchSettings.FieldAlias = 'Fecha inicial'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = False
+      AutoSearchSettings.SearchExpression = '42534'
+      DataType = dtDate
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = 42534d
+      UserName = 'FECHAINI'
+    end
+    object ppParameter2: TppParameter
+      AutoSearchSettings.Enabled = True
+      AutoSearchSettings.FieldAlias = 'Fecha final'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = False
+      AutoSearchSettings.SearchExpression = '42534'
+      DataType = dtDate
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = 42534d
+      UserName = 'FECHAFIN'
+    end
+    object ppParameter3: TppParameter
+      AutoSearchSettings.Enabled = True
+      AutoSearchSettings.FieldAlias = 'Desde vendedor'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = False
+      DataType = dtString
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = ''
+      UserName = 'CODVEND1'
+    end
+    object ppParameter4: TppParameter
+      AutoSearchSettings.Enabled = True
+      AutoSearchSettings.FieldAlias = 'Hasta vendedor'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = False
+      DataType = dtString
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = ''
+      UserName = 'CODVEND2'
+    end
+    object ppParameter5: TppParameter
+      AutoSearchSettings.FieldAlias = 'CODSUCU'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = False
+      DataType = dtString
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = ''
+      UserName = 'CODSUCU'
+    end
+  end
+end
